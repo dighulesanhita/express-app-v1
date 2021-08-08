@@ -1,0 +1,443 @@
+express --view=pug express-app-v1
+express install
+
+
+
+
+C:\Projects\npm-demo>cd..
+
+C:\Projects>dir
+ Volume in drive C is Local Disk
+ Volume Serial Number is 1CFD-CD9B
+
+ Directory of C:\Projects
+
+01/08/2021  12:14    <DIR>          .
+01/08/2021  12:14    <DIR>          ..
+31/07/2021  14:51               478 blocking_2.js
+31/07/2021  15:40             1,430 event-emitter_4.js
+01/08/2021  08:39               315 event.js
+01/08/2021  08:55                24 example.txt
+01/08/2021  09:23             1,344 exercise-1.js
+01/08/2021  08:56               358 file-write_7.js
+01/08/2021  09:23                26 first-exercise.txt
+31/07/2021  14:34               134 first_1.js
+01/08/2021  08:39               232 global-objects_5.js
+01/08/2021  10:57                71 http-10.js
+01/08/2021  11:22             1,465 http-11.js
+01/08/2021  11:49             2,289 http-12.js
+01/08/2021  09:56               334 http-8.js
+01/08/2021  10:52               849 http-9.js
+01/08/2021  12:06    <DIR>          node_modules
+31/07/2021  15:12               494 non-blocking_3.js
+01/08/2021  14:28    <DIR>          npm-demo
+01/08/2021  12:06            15,655 package-lock.json
+01/08/2021  08:46               354 paths_6.js
+31/07/2021  14:45                22 sample.txt
+01/08/2021  14:12               934 Webapps.txt
+              19 File(s)         26,808 bytes
+               4 Dir(s)  357,155,774,464 bytes free
+
+C:\Projects>express
+
+  warning: the default view engine will not be jade in future releases
+  warning: use `--view=jade' or `--help' for additional options
+
+destination is not empty, continue? [y/N] Y
+
+   create : public\
+   create : public\javascripts\
+   create : public\images\
+   create : public\stylesheets\
+   create : public\stylesheets\style.css
+   create : routes\
+   create : routes\index.js
+   create : routes\users.js
+   create : views\
+   create : views\error.jade
+   create : views\index.jade
+   create : views\layout.jade
+   create : app.js
+   create : package.json
+   create : bin\
+   create : bin\www
+
+   install dependencies:
+     > npm install
+
+   run the app:
+     > SET DEBUG=projects:* & npm start
+
+
+C:\Projects>express --view=pug express-app-v1
+
+   create : express-app-v1\
+   create : express-app-v1\public\
+   create : express-app-v1\public\javascripts\
+   create : express-app-v1\public\images\
+   create : express-app-v1\public\stylesheets\
+   create : express-app-v1\public\stylesheets\style.css
+   create : express-app-v1\routes\
+   create : express-app-v1\routes\index.js
+   create : express-app-v1\routes\users.js
+   create : express-app-v1\views\
+   create : express-app-v1\views\error.pug
+   create : express-app-v1\views\index.pug
+   create : express-app-v1\views\layout.pug
+   create : express-app-v1\app.js
+   create : express-app-v1\package.json
+   create : express-app-v1\bin\
+   create : express-app-v1\bin\www
+
+   change directory:
+     > cd express-app-v1
+
+   install dependencies:
+     > npm install
+
+   run the app:
+     > SET DEBUG=express-app-v1:* & npm start
+
+
+C:\Projects>code .
+
+C:\Projects>code .
+
+C:\Projects>cd express-app-v1
+
+C:\Projects\express-app-v1>code .
+
+C:\Projects\express-app-v1>npm install
+npm WARN deprecated core-js@2.6.12: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+
+> core-js@2.6.12 postinstall C:\Projects\express-app-v1\node_modules\core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon:
+> https://opencollective.com/core-js
+> https://www.patreon.com/zloirock
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+added 123 packages from 175 contributors and audited 124 packages in 4.434s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 2 vulnerabilities (1 low, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+C:\Projects\express-app-v1>npm start
+
+> express-app-v1@0.0.0 start C:\Projects\express-app-v1
+> node ./bin/www
+
+GET / 200 316.503 ms - 170
+GET /stylesheets/style.css 200 3.105 ms - 111
+GET / 304 17.707 ms - -
+GET /stylesheets/style.css 304 0.848 ms - -
+GET /users 200 1.232 ms - 23
+GET /users/1 404 9.909 ms - 1082
+GET /stylesheets/style.css 304 0.551 ms - -
+GET /users 304 0.485 ms - -
+GET /employees 404 10.858 ms - 1082
+GET /employees 404 18.078 ms - 1082
+GET /employees 404 10.676 ms - 1082
+GET /stylesheets/style.css 304 0.726 ms - -
+GET /stylesheets/style.css 304 0.581 ms - -
+Terminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>npm start
+
+> express-app-v1@0.0.0 start C:\Projects\express-app-v1
+> node ./bin/www
+
+C:\Projects\express-app-v1\app.js:25
+app.use('/employees', employeesRouter);
+                      ^
+
+ReferenceError: employeesRouter is not defined
+    at Object.<anonymous> (C:\Projects\express-app-v1\app.js:25:23)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\Projects\express-app-v1\bin\www:7:11)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! express-app-v1@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the express-app-v1@0.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\sanhi\AppData\Roaming\npm-cache\_logs\2021-08-01T14_19_59_601Z-debug.log
+
+C:\Projects\express-app-v1>npm start
+
+> express-app-v1@0.0.0 start C:\Projects\express-app-v1
+> node ./bin/www
+
+GET /employees 200 4.804 ms - 23
+Terminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>Y
+'Y' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Projects\express-app-v1>npm start
+
+> express-app-v1@0.0.0 start C:\Projects\express-app-v1
+> node ./bin/www
+
+GET /employees 200 9.341 ms - 21
+Terminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>Y
+'Y' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Projects\express-app-v1>npm start
+
+> express-app-v1@0.0.0 start C:\Projects\express-app-v1
+> node ./bin/www
+
+GET /employees 200 328.777 ms - 191
+GET /stylesheets/style.css 304 2.556 ms - -
+Terminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>npm start
+
+> express-app-v1@0.0.0 start C:\Projects\express-app-v1
+> node ./bin/www
+
+GET /employees 200 313.503 ms - 186
+GET /stylesheets/style.css 304 1.846 ms - -
+Terminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>nodemon
+[nodemon] 2.0.12
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node ./bin/www`
+[nodemon] restarting due to changes...
+^C[nodemon] starting `node ./bin/www`
+GET /employees 200 316.962 ms - 195
+GET /stylesheets/style.css 304 2.672 ms - -
+[nodemon] restarting due to changes...
+^C[nodemon] starting `node ./bin/www`
+[nodemon] restarting due to changes...
+internal/modules/cjs/loader.js:892
+  throw err;
+  ^
+
+Error: Cannot find module './routes/about'
+Require stack:
+- C:\Projects\express-app-v1\app.js
+- C:\Projects\express-app-v1\bin\www
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:745:27)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\Projects\express-app-v1\app.js:10:19)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Projects\\express-app-v1\\app.js',
+    'C:\\Projects\\express-app-v1\\bin\\www'
+  ]
+}
+[nodemon] starting `node ./bin/www`
+[nodemon] restarting due to changes...
+internal/modules/cjs/loader.js:892
+  throw err;
+  ^
+
+Error: Cannot find module './routes/about'
+Require stack:
+- C:\Projects\express-app-v1\app.js
+- C:\Projects\express-app-v1\bin\www
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:745:27)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\Projects\express-app-v1\app.js:10:19)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Projects\\express-app-v1\\app.js',
+    'C:\\Projects\\express-app-v1\\bin\\www'
+  ]
+}
+[nodemon] starting `node ./bin/www`
+internal/modules/cjs/loader.js:892
+  throw err;
+  ^
+
+Error: Cannot find module './routes/about'
+Require stack:
+- C:\Projects\express-app-v1\app.js
+- C:\Projects\express-app-v1\bin\www
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:745:27)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\Projects\express-app-v1\app.js:10:19)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Projects\\express-app-v1\\app.js',
+    'C:\\Projects\\express-app-v1\\bin\\www'
+  ]
+}
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+internal/modules/cjs/loader.js:892
+  throw err;
+  ^
+
+Error: Cannot find module './routes/about'
+Require stack:
+- C:\Projects\express-app-v1\app.js
+- C:\Projects\express-app-v1\bin\www
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:889:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:745:27)
+    at Module.require (internal/modules/cjs/loader.js:961:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at Object.<anonymous> (C:\Projects\express-app-v1\app.js:10:19)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Module.require (internal/modules/cjs/loader.js:961:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Projects\\express-app-v1\\app.js',
+    'C:\\Projects\\express-app-v1\\bin\\www'
+  ]
+}
+[nodemon] app crashed - waiting for file changes before starting...
+[nodemon] restarting due to changes...
+[nodemon] starting `node ./bin/www`
+[nodemon] restarting due to changes...
+^C[nodemon] starting `node ./bin/www`
+[nodemon] restarting due to changes...
+^C[nodemon] starting `node ./bin/www`
+[nodemon] restarting due to changes...
+^C[nodemon] starting `node ./bin/www`
+GET /about 200 314.512 ms - 0
+GET /about 304 2.273 ms - -
+        GET / 200 53.903 ms - 209
+GET /stylesheets/style.css 304 1.272 ms - -
+^C^CTerminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>nodemon
+[nodemon] 2.0.12
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node ./bin/www`
+^C^CTerminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>npm start
+
+> express-app-v1@0.0.0 start C:\Projects\express-app-v1
+> node ./bin/www
+
+GET / 304 323.567 ms - -
+GET /stylesheets/style.css 304 1.803 ms - -
+GET / 200 15.877 ms - 208
+GET /stylesheets/style.css 304 0.804 ms - -
+GET / 304 10.398 ms - -
+GET /stylesheets/style.css 304 0.992 ms - -
+GET / 200 13.147 ms - 305
+GET /stylesheets/style.css 304 0.945 ms - -
+GET / 304 20.280 ms - -
+GET /stylesheets/style.css 304 0.906 ms - -
+GET / 304 13.012 ms - -
+GET /stylesheets/style.css 304 0.421 ms - -
+GET / 304 20.540 ms - -
+GET /stylesheets/style.css 304 0.427 ms - -
+GET / 304 11.983 ms - -
+GET /stylesheets/style.css 304 0.380 ms - -
+GET / 304 7.515 ms - -
+GET /stylesheets/style.css 304 0.838 ms - -
+GET / 304 12.385 ms - -
+GET /stylesheets/style.css 304 0.588 ms - -
+GET / 304 22.048 ms - -
+GET /stylesheets/style.css 304 0.616 ms - -
+GET / 304 8.373 ms - -
+GET /stylesheets/style.css 304 0.476 ms - -
+GET / 304 8.087 ms - -
+GET /stylesheets/style.css 304 0.361 ms - -
+GET / 304 11.066 ms - -
+GET /stylesheets/style.css 304 0.457 ms - -
+GET / 304 10.048 ms - -
+GET /stylesheets/style.css 304 0.785 ms - -
+GET / 304 8.486 ms - -
+GET /stylesheets/style.css 304 0.876 ms - -
+GET / 304 9.555 ms - -
+GET /stylesheets/style.css 304 0.641 ms - -
+GET / 304 7.293 ms - -
+GET /stylesheets/style.css 304 0.784 ms - -
+GET / 304 15.878 ms - -
+GET /stylesheets/style.css 304 0.974 ms - -
+GET / 304 8.433 ms - -
+GET /stylesheets/style.css 304 0.628 ms - -
+GET /contacts 404 9.600 ms - 1217
+GET /stylesheets/style.css 304 0.485 ms - -
+GET /contacts 404 7.776 ms - 1217
+GET /stylesheets/style.css 304 0.497 ms - -
+GET /employees 200 9.788 ms - 330
+GET /stylesheets/style.css 304 0.529 ms - -
+GET /contacts 404 7.933 ms - 1217
+GET /stylesheets/style.css 304 0.461 ms - -
+GET /contacts 404 7.606 ms - 1217
+GET /stylesheets/style.css 304 0.493 ms - -
+Terminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>npm start
+
+> express-app-v1@0.0.0 start C:\Projects\express-app-v1
+> node ./bin/www
+
+GET /contacts 200 322.598 ms - 328
+GET /stylesheets/style.css 304 2.105 ms - -
+GET / 304 17.471 ms - -
+GET /stylesheets/style.css 304 0.679 ms - -
+GET / 304 32.055 ms - -
+GET /stylesheets/style.css 304 1.467 ms - -
+GET / 304 30.197 ms - -
+GET /stylesheets/style.css 304 1.127 ms - -
+GET / 200 15.852 ms - 327
+GET /stylesheets/style.css 304 0.769 ms - -
+GET /employees 200 28.533 ms - 352
+GET /stylesheets/style.css 304 0.474 ms - -
+GET /contacts 200 20.706 ms - 350
+GET /stylesheets/style.css 304 0.741 ms - -
+GET /about 304 1.376 ms - -
+Terminate batch job (Y/N)? Y
+
+C:\Projects\express-app-v1>
